@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Base</title>
+</head>
+<body>
+
+<center><h1>ToDo List</h1></center>
+<form action="/insert" method="post">
+    <input type="text" name="c_name">
+    <button type="submit">Agregar</button>
+</form>
+tarea reciente añadida:  {{c_name}}
+<center><h1>Tarea añadida</h1></center>
+{% for i in my_list %}
+{{i.c_id}} | {{i.c_name}} <br> <a href="/delete/{{i.c_id}}"> Eliminar</a> <br><br>
+{% endfor %}
+
+
+</body>
+</html>
